@@ -1,0 +1,51 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<?import java.lang.String?>
+<?import javafx.collections.FXCollections?>
+<?import javafx.scene.control.Button?>
+<?import javafx.scene.control.ButtonBar?>
+<?import javafx.scene.control.ComboBox?>
+<?import javafx.scene.control.Label?>
+<?import javafx.scene.control.ListView?>
+<?import javafx.scene.control.TextField?>
+<?import javafx.scene.layout.AnchorPane?>
+<?import javafx.scene.layout.BorderPane?>
+
+<BorderPane maxHeight="-Infinity" maxWidth="-Infinity" minHeight="-Infinity" minWidth="-Infinity" prefHeight="386.0" prefWidth="712.0" xmlns="http://javafx.com/javafx/19" xmlns:fx="http://javafx.com/fxml/1" fx:controller="com.example.youssefboubakri.Controller2">
+   <right>
+      <AnchorPane prefHeight="386.0" prefWidth="429.0" BorderPane.alignment="CENTER">
+         <children>
+            <ListView fx:id="listView" layoutX="14.0" layoutY="14.0" prefHeight="365.0" prefWidth="403.0" AnchorPane.bottomAnchor="7.0" AnchorPane.leftAnchor="14.0" AnchorPane.rightAnchor="12.0" AnchorPane.topAnchor="14.0" />
+         </children>
+      </AnchorPane>
+   </right>
+   <center>
+      <AnchorPane prefHeight="400.0" prefWidth="350.0" BorderPane.alignment="CENTER">
+         <children>
+            <Label ellipsisString="ID" layoutX="26.0" layoutY="25.0" text="ID" textFill="#2a07da" AnchorPane.bottomAnchor="357.4" AnchorPane.leftAnchor="26.0" AnchorPane.rightAnchor="254.0" AnchorPane.topAnchor="25.0" />
+            <Label layoutX="23.0" layoutY="75.0" text="Name" textFill="#3f0aee" />
+            <Label layoutX="24.0" layoutY="127.0" text="Type" textFill="#4305e1" AnchorPane.bottomAnchor="255.4" AnchorPane.leftAnchor="24.0" AnchorPane.rightAnchor="242.4" AnchorPane.topAnchor="127.0" />
+            <TextField fx:id="id" layoutX="24.0" layoutY="43.0" AnchorPane.bottomAnchor="331.4" AnchorPane.leftAnchor="24.0" AnchorPane.rightAnchor="118.4" AnchorPane.topAnchor="43.0" />
+            <TextField fx:id="name" layoutX="25.0" layoutY="93.0" AnchorPane.bottomAnchor="281.4" AnchorPane.leftAnchor="25.0" AnchorPane.rightAnchor="117.4" AnchorPane.topAnchor="93.0" />
+            <Label layoutX="24.0" layoutY="181.0" prefHeight="18.0" prefWidth="84.0" text="Worked Hours" textFill="#0e0be8" AnchorPane.bottomAnchor="201.0" AnchorPane.leftAnchor="24.0" AnchorPane.rightAnchor="184.0" AnchorPane.topAnchor="181.0" />
+            <TextField fx:id="hoursWork" layoutX="24.0" layoutY="201.0" AnchorPane.bottomAnchor="173.39999999999998" AnchorPane.leftAnchor="24.0" AnchorPane.rightAnchor="118.4" AnchorPane.topAnchor="201.0" />
+            <ComboBox fx:id="type" layoutX="25.0" layoutY="147.0" prefWidth="150.0" AnchorPane.bottomAnchor="227.4" AnchorPane.leftAnchor="25.0" AnchorPane.rightAnchor="116.6" AnchorPane.topAnchor="147.0">
+               <items>
+                  <FXCollections fx:factory="observableArrayList">
+                     <String fx:value="Senior" />
+                     <String fx:value="Junior" />
+                  </FXCollections>
+               </items>
+            </ComboBox>
+            
+            <ButtonBar layoutY="236.0" prefHeight="142.0" prefWidth="280.0" AnchorPane.bottomAnchor="109.0" AnchorPane.leftAnchor="0.0" AnchorPane.rightAnchor="12.0" AnchorPane.topAnchor="236.0">
+              <buttons>
+                  <Button fx:id="addBtn" mnemonicParsing="false" onAction="#onSubmit" text="Submit" textFill="#4d09f8" />
+                <Button fx:id="recapBtn" mnemonicParsing="false" onAction="#onRecap" text="Recap" textFill="#190aee" />
+                  <Button fx:id="coutBtn" mnemonicParsing="false" onAction="#onCout" text="Cost" textFill="#320ae4" />
+              </buttons>
+            </ButtonBar>
+         </children>
+      </AnchorPane>
+   </center>
+</BorderPane>
